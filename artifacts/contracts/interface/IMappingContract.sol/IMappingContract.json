@@ -11,7 +11,7 @@
           "type": "bytes32"
         }
       ],
-      "name": "getTellorID",
+      "name": "getFetchID",
       "outputs": [
         {
           "internalType": "bytes32",

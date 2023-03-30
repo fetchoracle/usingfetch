@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 contract MappingContractExample{
-    function getTellorID(bytes32 _id) external pure returns(bytes32){
+    function getFetchID(bytes32 _id) external pure returns(bytes32){
         if (
             _id ==
             0xdfaa6f747f0f012e8f2069d6ecacff25f5cdf0258702051747439949737fc0b5

@@ -8,7 +8,7 @@ const precision = BigInt(1e18);
 const FAUCET_AMOUNT = BigInt(1000) * precision;
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
-describe("UsingTellor Function Tests", function() {
+describe("UsingFetch Function Tests", function() {
 
 	let bench
   let playground
@@ -17,12 +17,12 @@ describe("UsingTellor Function Tests", function() {
 
 	beforeEach(async function () {
     
-		const TellorPlayground = await ethers.getContractFactory("TellorPlayground");
-		playground = await TellorPlayground.deploy();
+		const FetchPlayground = await ethers.getContractFactory("FetchPlayground");
+		playground = await FetchPlayground.deploy();
     await playground.deployed();
 
-    const BenchUsingTellor = await ethers.getContractFactory("BenchUsingTellor");
-    bench = await BenchUsingTellor.deploy(playground.address);
+    const BenchUsingFetch = await ethers.getContractFactory("BenchUsingFetch");
+    bench = await BenchUsingFetch.deploy(playground.address);
     await bench.deployed();
 
     const MappingContract = await ethers.getContractFactory("MappingContractExample");
@@ -125,8 +125,8 @@ describe("UsingTellor Function Tests", function() {
     await h.expectThrow(bench.setIdMappingContract(addr1.address), "mapping contract should not be able to be called twice")
   })
 
-	it("tellor()", async function() {
-		expect(await bench.tellor()).to.equal(playground.address)
+	it("fetch()", async function() {
+		expect(await bench.fetch()).to.equal(playground.address)
 	})
 
   it("getIndexForDataAfter()", async function() {
