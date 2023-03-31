@@ -3,7 +3,7 @@ pragma solidity >=0.8.0;
 
 /**
     * @dev EIP2362 Interface for pull oracles
-    * https://github.com/tellor-io/EIP-2362
+    * https://github.com/fetchoracle/EIP-2362
 */
 interface IERC2362
 {

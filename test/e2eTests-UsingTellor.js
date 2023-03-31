@@ -7,7 +7,7 @@ let abiCoder = new ethers.utils.AbiCoder
 const QUERY_DATA_1 = h.uintTob32(1);
 const QUERY_ID_1 = h.hash(QUERY_DATA_1);
 
-describe("UsingTellor Function Tests", function() {
+describe("UsingFetch Function Tests", function() {
 
 	let bench
   let playground
@@ -16,12 +16,12 @@ describe("UsingTellor Function Tests", function() {
 
 	beforeEach(async function () {
     
-		const TellorPlayground = await ethers.getContractFactory("TellorPlayground");
-		playground = await TellorPlayground.deploy();
+		const FetchPlayground = await ethers.getContractFactory("FetchPlayground");
+		playground = await FetchPlayground.deploy();
     await playground.deployed();
 
-    const BenchUsingTellor = await ethers.getContractFactory("BenchUsingTellor");
-    bench = await BenchUsingTellor.deploy(playground.address);
+    const BenchUsingFetch = await ethers.getContractFactory("BenchUsingFetch");
+    bench = await BenchUsingFetch.deploy(playground.address);
     await bench.deployed();
 
     const MappingContract = await ethers.getContractFactory("MappingContractExample");

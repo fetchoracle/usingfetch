@@ -1,5 +1,5 @@
 {
-  "name": "usingtellor",
+  "name": "usingfetch",
   "version": "5.0.4",
   "main": "hardhat.config.js",
   "directories": {
@@ -31,9 +31,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tellor-io/usingtellor"
+    "url": "https://github.com/fetchoracle/usingfetch"
   },
-  "author": "Tellor",
+  "author": "Fetch",
   "license": "MIT",
-  "homepage": "https://github.com/tellor-io/usingtellor"
+  "homepage": "https://github.com/fetchoracle/usingfetch"
 }

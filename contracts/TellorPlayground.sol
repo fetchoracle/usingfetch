@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract TellorPlayground {
+contract FetchPlayground {
     // Events
     event Approval(
         address indexed owner,
@@ -56,7 +56,7 @@ contract TellorPlayground {
      * @dev Initializes playground parameters
      */
     constructor() {
-        _name = "TellorPlayground";
+        _name = "FetchPlayground";
         _symbol = "TRBP";
         _decimals = 18;
         token = address(this);
@@ -84,7 +84,7 @@ contract TellorPlayground {
 
     /**
      * @dev A mock function to create a dispute
-     * @param _queryId The tellorId to be disputed
+     * @param _queryId The fetchId to be disputed
      * @param _timestamp the timestamp of the value to be disputed
      */
     function beginDispute(bytes32 _queryId, uint256 _timestamp) external {

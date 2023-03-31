@@ -1,29 +1,29 @@
 <p align="center">
-  <a href='https://twitter.com/WeAreTellor'>
-    <img src= 'https://img.shields.io/twitter/url/http/shields.io.svg?style=social' alt='Twitter WeAreTellor' />
+  <a href='https://twitter.com/WeAreFetch'>
+    <img src= 'https://img.shields.io/twitter/url/http/shields.io.svg?style=social' alt='Twitter WeAreFetch' />
   </a>
 </p>
 
 
 # Overview
 
-Use this package to install the Tellor User Contracts and integrate Tellor into your contracts.
+Use this package to install the Fetch User Contracts and integrate Fetch into your contracts.
 
-Once installed this will allow your contracts to inherit the functions from UsingTellor.
+Once installed this will allow your contracts to inherit the functions from UsingFetch.
 
 #### How to Use
-Just inherit the UsingTellor contract, passing the Tellor address as a constructor argument:
+Just inherit the UsingFetch contract, passing the Fetch address as a constructor argument:
 
 Here's an example
 ```solidity
-import "usingtellor/contracts/UsingTellor.sol";
+import "usingfetch/contracts/UsingFetch.sol";
 
-contract PriceContract is UsingTellor {
+contract PriceContract is UsingFetch {
 
   uint256 public btcPrice;
 
-  // This contract now has access to all functions in UsingTellor
-  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
+  // This contract now has access to all functions in UsingFetch
+  constructor(address payable _fetchAddress) UsingFetch(_fetchAddress) public {}
 
   function setBtcPrice() public {
       bytes memory _b = abi.encode("SpotPrice", abi.encode("btc", "usd"));
@@ -39,10 +39,10 @@ contract PriceContract is UsingTellor {
 ```
 ##### Addresses:
 
-Find Tellor contract addresses [here](https://docs.tellor.io/tellor/the-basics/contracts-reference).
+Find Fetch contract addresses [here](https://docs.fetch.io/fetch/the-basics/contracts-reference).
 
 
-#### Available Tellor functions:
+#### Available Fetch functions:
 
 Children contracts have access to the following functions:
 
@@ -170,14 +170,14 @@ function retrieveData(bytes32 _queryId, uint256 _timestamp)
 ```
 
 
-#### Tellor Playground:
+#### Fetch Playground:
 
-For ease of use, the  `UsingTellor`  repo comes with a version of [Tellor Playground](https://github.com/tellor-io/TellorPlayground) for easier integration. This version contains a few helper functions:
+For ease of use, the  `UsingFetch`  repo comes with a version of [Fetch Playground](https://github.com/fetchoracle/FetchPlayground) for easier integration. This version contains a few helper functions:
 
 ```solidity
 /**
  * @dev A mock function to submit a value to be read without miners needed
- * @param _queryId The tellorId to associate the value to
+ * @param _queryId The fetchId to associate the value to
  * @param _value the value for the queryId
  * @param _nonce the current value count for the query id
  * @param _queryData the data used by reporters to fulfill the data query
@@ -186,7 +186,7 @@ function submitValue(bytes32 _queryId, bytes calldata _value, uint256 _nonce, by
 
 /**
  * @dev A mock function to create a dispute
- * @param _queryId The tellorId to be disputed
+ * @param _queryId The fetchId to be disputed
  * @param _timestamp the timestamp of the value to be disputed
  */
 function beginDispute(bytes32 _queryId, uint256 _timestamp) external;
@@ -197,15 +197,15 @@ function beginDispute(bytes32 _queryId, uint256 _timestamp) external;
 Open a git bash terminal and run this code:
 
 ```bash
-git clone https://github.com/tellor-io/usingtellor.git
-cd usingtellor
+git clone https://github.com/fetchoracle/usingfetch.git
+cd usingfetch
 npm i
 npm test
 ```
 
-# Implementing using Tellor
-See our documentation for implementing usingTellor [here.](https://docs.tellor.io/tellor/getting-data/introduction)
+# Implementing using Fetch
+See our documentation for implementing usingFetch [here.](https://docs.fetch.io/fetch/getting-data/introduction)
 
 # Keywords
 
-Decentralized oracle, price oracle, oracle, Tellor, TRB, Tributes, price data, smart contracts.
+Decentralized oracle, price oracle, oracle, Fetch, TRB, Tributes, price data, smart contracts.
