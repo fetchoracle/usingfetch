@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
   "contractName": "FetchPlayground",
-  "sourceName": "contracts/TellorPlayground.sol",
+  "sourceName": "contracts/FetchPlayground.sol",
   "abi": [
     {
       "inputs": [],
