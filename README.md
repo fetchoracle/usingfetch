@@ -39,7 +39,7 @@ contract PriceContract is UsingFetch {
 ```
 ##### Addresses:
 
-Find Fetch contract addresses [here](https://docs.fetch.io/fetch/the-basics/contracts-reference).
+Find Fetch contract addresses [here](https://docs.fetchoracle.com/fetch/the-basics/contracts-reference).
 
 
 #### Available Fetch functions:
@@ -204,7 +204,7 @@ npm test
 ```
 
 # Implementing using Fetch
-See our documentation for implementing usingFetch [here.](https://docs.fetch.io/fetch/getting-data/introduction)
+See our documentation for implementing usingFetch [here.](https://docs.fetchoracle.com/fetch/getting-data/introduction)
 
 # Keywords
 
