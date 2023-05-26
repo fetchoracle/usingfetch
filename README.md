@@ -1,10 +1,3 @@
-<p align="center">
-  <a href='https://twitter.com/WeAreFetch'>
-    <img src= 'https://img.shields.io/twitter/url/http/shields.io.svg?style=social' alt='Twitter WeAreFetch' />
-  </a>
-</p>
-
-
 # Overview
 
 Use this package to install the Fetch User Contracts and integrate Fetch into your contracts.
