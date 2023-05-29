@@ -1,10 +1,3 @@
-<p align="center">
-  <a href='https://twitter.com/WeAreFetch'>
-    <img src= 'https://img.shields.io/twitter/url/http/shields.io.svg?style=social' alt='Twitter WeAreFetch' />
-  </a>
-</p>
-
-
 # Overview
 
 Use this package to install the Fetch User Contracts and integrate Fetch into your contracts.
@@ -39,7 +32,7 @@ contract PriceContract is UsingFetch {
 ```
 ##### Addresses:
 
-Find Fetch contract addresses [here](https://docs.fetch.io/fetch/the-basics/contracts-reference).
+Find Fetch contract addresses [here](https://docs.fetchoracle.com/fetch/the-basics/contracts-reference).
 
 
 #### Available Fetch functions:
@@ -204,7 +197,7 @@ npm test
 ```
 
 # Implementing using Fetch
-See our documentation for implementing usingFetch [here.](https://docs.fetch.io/fetch/getting-data/introduction)
+See our documentation for implementing usingFetch [here.](https://docs.fetchoracle.com/fetch/getting-data/introduction)
 
 # Keywords
 
