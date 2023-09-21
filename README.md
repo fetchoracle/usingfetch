@@ -13,26 +13,26 @@ import "usingfetch/contracts/UsingFetch.sol";
 
 contract PriceContract is UsingFetch {
 
-  uint256 public btcPrice;
-
   // This contract now has access to all functions in UsingFetch
-  constructor(address payable _fetchAddress) UsingFetch(_fetchAddress) public {}
+  constructor(address payable _fetchAddress) UsingFetch(_fetchAddress) {}
 
-  function setBtcPrice() public {
-      bytes memory _b = abi.encode("SpotPrice", abi.encode("btc", "usd"));
-      bytes32 _btcQueryId = keccak256(_b);
+  function getPrice() public view returns (uint256) {
+      bytes32 _plsQueryId = keccak256(abi.encode("SpotPrice", abi.encode("pls", "usd")));
 
       uint256 _timestamp;
       bytes memory _value;
 
-      (_value, _timestamp) = getDataBefore(_btcQueryId, block.timestamp - 1 hours);
-      btcPrice = abi.decode(_value,(uint256));
+      (_value, _timestamp) = getDataBefore(_plsQueryId, block.timestamp);
+      return abi.decode(_value,(uint256));
   }
 }
 ```
 ##### Addresses:
 
-Find Fetch contract addresses [here](https://docs.fetchoracle.com/fetch/the-basics/contracts-reference).
+Find Fetch contract addresses:
+
+mainnet:
+testnet: 0x252eC80dEa7F3eD0CC57e0f1112d6f56Ae9523fb
 
 
 #### Available Fetch functions:
@@ -201,4 +201,4 @@ See our documentation for implementing usingFetch [here.](https://docs.fetchorac
 
 # Keywords
 
-Decentralized oracle, price oracle, oracle, Fetch, TRB, Tributes, price data, smart contracts.
+Decentralized oracle, price oracle, oracle, Fetch, price data, smart contracts.
