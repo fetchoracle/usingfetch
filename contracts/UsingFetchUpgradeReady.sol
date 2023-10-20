@@ -7,19 +7,14 @@ import "./interface/IMappingContract.sol";
 
 /**
  @author Fetch Inc
- @title UsingFetch
+ @title UsingFetchUpgradeReady
  @dev This contract helps smart contracts read data from Fetch
  */
-contract UsingFetch is IERC2362 {
+contract UsingFetchUpgradeReady is IERC2362 {
     IFetch public fetch;
     IMappingContract public idMappingContract;
 
-    /*Constructor*/
-    /**
-     * @dev the constructor sets the oracle address in storage
-     * @param _fetch is the Fetch Oracle address
-     */
-    constructor(address payable _fetch) {
+    function setFetchAddress(address payable _fetch) internal {
         fetch = IFetch(_fetch);
     }
 
