@@ -13,6 +13,7 @@ import "./interface/IMappingContract.sol";
 contract UsingFetchUpgradeReady is IERC2362 {
     IFetch public fetch;
     IMappingContract public idMappingContract;
+    uint256[50] private __gap;
 
     function setFetchAddress(address payable _fetch) internal {
         fetch = IFetch(_fetch);
