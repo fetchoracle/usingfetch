@@ -31,7 +31,7 @@ contract PriceContract is UsingFetch {
 
 Find Fetch contract addresses:
 
-mainnet:
+mainnet: 0x6f390b99201bb43A05757019efe9C99651e04584
 testnet: 0x252eC80dEa7F3eD0CC57e0f1112d6f56Ae9523fb
 
 
