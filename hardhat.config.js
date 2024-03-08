@@ -7,7 +7,7 @@ require("@nomiclabs/hardhat-ethers");
 task("balance", "Prints an account's balance").setAction(async () => {});
 
 module.exports = {
-  solidity: "0.8.3",
+  solidity: "0.8.20",
   networks: {
     hardhat: {
       // forking: {
