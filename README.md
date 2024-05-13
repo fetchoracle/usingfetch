@@ -17,7 +17,7 @@ contract PriceContract is UsingFetch {
   constructor(address payable _fetchAddress) UsingFetch(_fetchAddress) {}
 
   function getPrice() public view returns (uint256) {
-      bytes32 _plsQueryId = keccak256(abi.encode("SpotPrice", abi.encode("pls", "usd")));
+      bytes32 _plsQueryId = keccak256(abi.encode("SpotPrice", abi.encode("llpls", "usd")));
 
       uint256 _timestamp;
       bytes memory _value;
@@ -31,9 +31,8 @@ contract PriceContract is UsingFetch {
 
 Find Fetch contract addresses:
 
-mainnet: 0x6f390b99201bb43A05757019efe9C99651e04584
-testnet: 0x252eC80dEa7F3eD0CC57e0f1112d6f56Ae9523fb
-
+* mainnet: `0x23716E2dCC327429253335E4646dEbaD1Ac0E57c`
+* testnet: `0x252eC80dEa7F3eD0CC57e0f1112d6f56Ae9523fb`
 
 #### Available Fetch functions:
 
