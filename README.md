@@ -195,9 +195,6 @@ npm i
 npm test
 ```
 
-# Implementing using Fetch
-See our documentation for implementing usingFetch [here.](https://docs.fetchoracle.com/fetch/getting-data/introduction)
-
 # Keywords
 
 Decentralized oracle, price oracle, oracle, Fetch, price data, smart contracts.
