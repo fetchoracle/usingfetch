@@ -1,3 +1,5 @@
+[![Tests](https://github.com/fetchoracle/usingfetch/actions/workflows/tests.yml/badge.svg)]
+
 # Overview
 
 Use this package to install the Fetch User Contracts and integrate Fetch into your contracts.
